@@ -17,8 +17,8 @@ hh_power$datetime <- strptime(hh_power$datetime, format = "%Y-%m-%d %H:%M:%S")
 png(file = "plot3.png", width = 480, height = 480)
 plot(hh_power$datetime, hh_power$Sub_metering_1, type = "l", xlab = "", 
      ylab = "Energy sub metering")
-lines(hh_power$datetime, hh_power$Sub_metering_2, type = "l", col = "blue")
-lines(hh_power$datetime, hh_power$Sub_metering_3, type = "l",col = "red")
+lines(hh_power$datetime, hh_power$Sub_metering_2, type = "l", col = "red")
+lines(hh_power$datetime, hh_power$Sub_metering_3, type = "l",col = "blue")
 legend("topright",legend=c("sub_metering_1","sub_metering_2","sub_metering_3"), 
-       lty = c(1, 1, 1), lwd = c(1, 1, 1),col = c("black","blue","red"))
+       lty = c(1, 1, 1), lwd = c(1, 1, 1),col = c("black","red","blue"))
 dev.off()

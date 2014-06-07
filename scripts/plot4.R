@@ -33,17 +33,21 @@ if (!file.exists("./data/figure")) {
 
 # --- plot to PNG file
 png(file = "./data/figure/plot4.png", width = 480, height = 480)
-par(mfrow = c(2,2))
+par(mfrow = c(2,2)) # -- 4 plots to device, 2 rows, 2 columns
+
 plot (hh_power$datetime,hh_power$Global_active_power, type = "l", xlab = "",
-      ylab = "Global Active Power (kilowatts)")
+      ylab = "Global Active Power (kilowatts)") # -- top left plot
+
 plot (hh_power$datetime,hh_power$Voltage, type = "l", xlab = "datetime",
-      ylab = "Voltage")
+      ylab = "Voltage") # -- top right plot
+
 plot(hh_power$datetime, hh_power$Sub_metering_1, type = "l", xlab = "", 
-     ylab = "Energy sub metering")
-lines(hh_power$datetime, hh_power$Sub_metering_2, type = "l", col = "red")
-lines(hh_power$datetime, hh_power$Sub_metering_3, type = "l",col = "blue")
-legend("topright",legend = c("sub_metering_1","sub_metering_2","sub_metering_3"), 
+     ylab = "Energy sub metering") # -- bottom left plot
+    lines(hh_power$datetime, hh_power$Sub_metering_2, type = "l", col = "red")
+    lines(hh_power$datetime, hh_power$Sub_metering_3, type = "l",col = "blue")
+    legend("topright",legend = c("sub_metering_1","sub_metering_2","sub_metering_3"), 
        lty = c(1, 1, 1), lwd = c(1, 1, 1), bty = "n", col = c("black","red","blue"))
+
 plot (hh_power$datetime,hh_power$Global_reactive_power, type = "l", xlab = "datetime",
-      ylab = "Global_reactive_power")
+      ylab = "Global_reactive_power") # -- bottom right plot
 dev.off()

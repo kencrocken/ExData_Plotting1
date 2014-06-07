@@ -1,3 +1,13 @@
+##Please note that my scripts are in the [scripts folder](scripts/). The plots created by the scripts are in the [figure folder](figure/) and are as follows:
+
+![image](figure/plot1.png)
+![image](figure/plot2.png)
+![image](figure/plot3.png)
+![image](figure/plot4.png)
+
+###Thanks!
+====
+
 ## Introduction
 
 This assignment uses data from

@@ -22,10 +22,10 @@ plot (hh_power$datetime,hh_power$Voltage, type = "l", xlab = "datetime",
       ylab = "Voltage")
 plot(hh_power$datetime, hh_power$Sub_metering_1, type = "l", xlab = "", 
      ylab = "Energy sub metering")
-lines(hh_power$datetime, hh_power$Sub_metering_2, type = "l", col = "blue")
-lines(hh_power$datetime, hh_power$Sub_metering_3, type = "l",col = "red")
-legend("topright",legend=c("sub_metering_1","sub_metering_2","sub_metering_3"), 
-       lty = c(1, 1, 1), lwd = c(1, 1, 1),col = c("black","blue","red"))
+lines(hh_power$datetime, hh_power$Sub_metering_2, type = "l", col = "red")
+lines(hh_power$datetime, hh_power$Sub_metering_3, type = "l",col = "blue")
+legend("topright",legend = c("sub_metering_1","sub_metering_2","sub_metering_3"), 
+       lty = c(1, 1, 1), lwd = c(1, 1, 1), bty = "n", col = c("black","red","blue"))
 plot (hh_power$datetime,hh_power$Global_reactive_power, type = "l", xlab = "datetime",
       ylab = "Global_reactive_power")
 dev.off()

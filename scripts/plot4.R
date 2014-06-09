@@ -12,7 +12,7 @@ if (!file.exists("./data/household_power_consumption.txt")) {
 }
 
 # --- Read data
-hh_power <- read.table(".data/household_power_consumption.txt", header = TRUE, 
+hh_power <- read.table("./data/household_power_consumption.txt", header = TRUE, 
                        sep = ";", na.strings = "?")
 
 # --- Subset into the appropriate data, coerce the data column into date data type
